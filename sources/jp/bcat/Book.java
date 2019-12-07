@@ -1,6 +1,12 @@
 package jp.bcat;
 import java.io.Serializable;
 
+/*図書クラス(Book.java)
+ *
+ * 図書情報を格納する永続オブジェクト
+ *
+ */
+
 public class Book implements Serializable {
 	protected String bookId;
 	protected String title;
