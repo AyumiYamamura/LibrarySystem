@@ -1,6 +1,7 @@
 package jp.bcat;
 import java.io.*;
-
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /*図書登録コマンド(AddCommand.java)
  *
@@ -46,7 +47,7 @@ public class AddCommand implements CLICommand{
 		out.print("登録者名*: ");
 		out.flush();
 		book.setDataCreator(in.readLine());
-		String now = new SimpleDataFormat("yyyy-mm-dd").format(new Date());
+		String now = new SimpleDateFormat("yyyy-mm-dd").format(new Date());
 		book.setDataCreatedDate(now);
 		new BookWriter(out,"+").write(book);
 		out.print("この内容で登録しますか？(y/n)[y]: ");
