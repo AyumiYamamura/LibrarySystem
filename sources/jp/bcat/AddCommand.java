@@ -58,16 +58,16 @@ public class AddCommand implements CLICommand{
 		out.println("登録しました。");
 	}
 
-public static void main(String args[]) {
-	try {
-		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-		PrintWriter out = new PrintWriter(new OutputStreamWriter(System.out), true);
-		BookCatalog catalog = new BookCatalog();
-		AddCommand command = new AddCommand(catalog);
-		command.process(in, out);
-	} catch (Exception e) {
-		e.printStackTrace();
+	public static void main(String args[]) {
+		try {
+			BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+			PrintWriter out = new PrintWriter(new OutputStreamWriter(System.out), true);
+			BookCatalog catalog = new BookCatalog();
+			AddCommand command = new AddCommand(catalog);
+			command.process(in, out);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 }
-	}
-}
+
